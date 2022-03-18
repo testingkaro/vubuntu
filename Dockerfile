@@ -13,7 +13,7 @@ ENV VNC_PASS="testing" \
 #VNC Shared Mode (0=off, 1=on)
     VNC_SHARED=0 \
 #Local Display Server Port
-    DISPLAY=:1 \
+    DISPLAY=:0 \
 #NoVNC Port
     NOVNC_PORT=$PORT \
 #Ngrok Token
