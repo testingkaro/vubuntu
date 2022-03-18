@@ -1,19 +1,19 @@
 FROM ubuntu:20.04
 
-LABEL Maintainer "Apoorv Vyavahare <apoorvvyavahare@pm.me>"
+LABEL Maintainer "Test Karo <testkaro7@gmail.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 #VNC Server Password
-ENV VNC_PASS="samplepass" \
+ENV VNC_PASS="testing" \
 #VNC Server Title(w/o spaces)
-    VNC_TITLE="Vubuntu_Desktop" \
+    VNC_TITLE="Test_Desktop" \
 #VNC Resolution(720p is preferable)
-    VNC_RESOLUTION="1280x720" \
+    VNC_RESOLUTION="1024x720" \
 #VNC Shared Mode (0=off, 1=on)
-    VNC_SHARED=0 \
+    VNC_SHARED=1 \
 #Local Display Server Port
-    DISPLAY=:0 \
+    DISPLAY=:1 \
 #NoVNC Port
     NOVNC_PORT=$PORT \
 #Ngrok Token
@@ -47,14 +47,14 @@ RUN apt-get update && \
 #Go
     golang \
 #Other Languages
-    #perl \
-    #ruby \
-    #lua5.3 \
-    #scala \
-    #mono-complete \
-    #r-base \
-    #clojure \
-    #php \
+    perl \
+    ruby \
+    lua5.3 \
+    scala \
+    mono-complete \
+    r-base \
+    clojure \
+    php \
 #Extras
     libreoffice \
     gnupg \
