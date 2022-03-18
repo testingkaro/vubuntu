@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL Maintainer "Test Karo <testkaro7@gmail.com>"
+LABEL Maintainer "cnagda <testkaro7@gmail.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -9,9 +9,9 @@ ENV VNC_PASS="testing" \
 #VNC Server Title(w/o spaces)
     VNC_TITLE="Test_Desktop" \
 #VNC Resolution(720p is preferable)
-    VNC_RESOLUTION="1024x720" \
+    VNC_RESOLUTION="1024x720x16" \
 #VNC Shared Mode (0=off, 1=on)
-    VNC_SHARED=1 \
+    VNC_SHARED=0 \
 #Local Display Server Port
     DISPLAY=:1 \
 #NoVNC Port
